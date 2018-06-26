@@ -1,85 +1,124 @@
 package sample;
 
-import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
-import javafx.scene.layout.AnchorPane;
-
-import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
-
 public class CalcController {
 
-    static double firstNumber = 0;
-    static double secondNumber = 0;
-    static int operationFlag = 0;
+    private static double firstNumber = 0;
+    private static double secondNumber = 0;
+    private static int operationFlag = 0;
+    private static int resultFlag = 0;
 
-
-    public void initialize(URL location, ResourceBundle resources) {
-        FXMLLoader loader = new FXMLLoader();
-        loader.setResources(resources);
-
-        try {
-            AnchorPane pane = loader.load(getClass().getResource("/calc.fxml"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    public void clearVariables(){
+        firstNumber = 0;
+        secondNumber = 0;
+        operationFlag = 0;
+        resultFlag = 0;
     }
     public void clearButtonClicked() {
         CalcApp.resultTextArea.setText("0");
+        clearVariables();
     }
     public void commaButtonClicked() {
         if(!CalcApp.resultTextArea.getText().contains("."))
             CalcApp.resultTextArea.setText(CalcApp.resultTextArea.getText() + ".");
     }
     public void zeroButtonClicked() {
-        if(!CalcApp.resultTextArea.getText().equals("0"))
-            CalcApp.resultTextArea.setText(CalcApp.resultTextArea.getText() + "0");
+        if(resultFlag==0) {
+            if (!CalcApp.resultTextArea.getText().equals("0"))
+                CalcApp.resultTextArea.setText(CalcApp.resultTextArea.getText() + "0");
+        } else {
+            CalcApp.resultTextArea.setText("0");
+            clearVariables();
+        }
     }
     public void oneButtonClicked() {
-        if(!CalcApp.resultTextArea.getText().equals("0"))
-            CalcApp.resultTextArea.setText(CalcApp.resultTextArea.getText() + "1");
-        else CalcApp.resultTextArea.setText("1");
+        if(resultFlag==0) {
+            if (!CalcApp.resultTextArea.getText().equals("0"))
+                CalcApp.resultTextArea.setText(CalcApp.resultTextArea.getText() + "1");
+            else CalcApp.resultTextArea.setText("1");
+        } else {
+            CalcApp.resultTextArea.setText("1");
+            clearVariables();
+        }
     }
     public void twoButtonClicked() {
-        if(!CalcApp.resultTextArea.getText().equals("0"))
-            CalcApp.resultTextArea.setText(CalcApp.resultTextArea.getText() + "2");
-        else CalcApp.resultTextArea.setText("2");
+        if(resultFlag==0) {
+            if (!CalcApp.resultTextArea.getText().equals("0"))
+                CalcApp.resultTextArea.setText(CalcApp.resultTextArea.getText() + "2");
+            else CalcApp.resultTextArea.setText("2");
+        } else {
+            CalcApp.resultTextArea.setText("2");
+            clearVariables();
+        }
     }
     public void threeButtonClicked() {
-        if(!CalcApp.resultTextArea.getText().equals("0"))
-            CalcApp.resultTextArea.setText(CalcApp.resultTextArea.getText() + "3");
-        else CalcApp.resultTextArea.setText("3");
+        if(resultFlag==0) {
+            if (!CalcApp.resultTextArea.getText().equals("0"))
+                CalcApp.resultTextArea.setText(CalcApp.resultTextArea.getText() + "3");
+            else CalcApp.resultTextArea.setText("3");
+        } else {
+            CalcApp.resultTextArea.setText("3");
+            clearVariables();
+        }
     }
     public void fourButtonClicked() {
-        if(!CalcApp.resultTextArea.getText().equals("0"))
-            CalcApp.resultTextArea.setText(CalcApp.resultTextArea.getText() + "4");
-        else CalcApp.resultTextArea.setText("4");
+        if(resultFlag==0) {
+            if (!CalcApp.resultTextArea.getText().equals("0"))
+                CalcApp.resultTextArea.setText(CalcApp.resultTextArea.getText() + "4");
+            else CalcApp.resultTextArea.setText("4");
+        } else {
+            CalcApp.resultTextArea.setText("4");
+            clearVariables();
+        }
     }
     public void fiveButtonClicked() {
-        if(!CalcApp.resultTextArea.getText().equals("0"))
-            CalcApp.resultTextArea.setText(CalcApp.resultTextArea.getText() + "5");
-        else CalcApp.resultTextArea.setText("5");
+        if(resultFlag==0) {
+            if (!CalcApp.resultTextArea.getText().equals("0"))
+                CalcApp.resultTextArea.setText(CalcApp.resultTextArea.getText() + "5");
+            else CalcApp.resultTextArea.setText("5");
+        } else {
+            CalcApp.resultTextArea.setText("5");
+            clearVariables();
+        }
     }
     public void sixButtonClicked() {
-        if(!CalcApp.resultTextArea.getText().equals("0"))
-            CalcApp.resultTextArea.setText(CalcApp.resultTextArea.getText() + "6");
-        else CalcApp.resultTextArea.setText("6");
+        if(resultFlag==0) {
+            if (!CalcApp.resultTextArea.getText().equals("0"))
+                CalcApp.resultTextArea.setText(CalcApp.resultTextArea.getText() + "6");
+            else CalcApp.resultTextArea.setText("6");
+        } else {
+            CalcApp.resultTextArea.setText("6");
+            clearVariables();
+        }
     }
     public void sevenButtonClicked() {
-        if(!CalcApp.resultTextArea.getText().equals("0"))
-            CalcApp.resultTextArea.setText(CalcApp.resultTextArea.getText() + "7");
-        else CalcApp.resultTextArea.setText("7");
+        if(resultFlag==0) {
+            if (!CalcApp.resultTextArea.getText().equals("0"))
+                CalcApp.resultTextArea.setText(CalcApp.resultTextArea.getText() + "7");
+            else CalcApp.resultTextArea.setText("7");
+        } else {
+            CalcApp.resultTextArea.setText("7");
+            clearVariables();
+        }
     }
     public void eightButtonClicked() {
-        if(!CalcApp.resultTextArea.getText().equals("0"))
-            CalcApp.resultTextArea.setText(CalcApp.resultTextArea.getText() + "8");
-        else CalcApp.resultTextArea.setText("8");
+        if(resultFlag==0) {
+            if (!CalcApp.resultTextArea.getText().equals("0"))
+                CalcApp.resultTextArea.setText(CalcApp.resultTextArea.getText() + "8");
+            else CalcApp.resultTextArea.setText("8");
+        } else {
+            CalcApp.resultTextArea.setText("8");
+            clearVariables();
+        }
     }
     public void nineButtonClicked() {
-        if(!CalcApp.resultTextArea.getText().equals("0"))
-            CalcApp.resultTextArea.setText(CalcApp.resultTextArea.getText() + "9");
-        else CalcApp.resultTextArea.setText("9");
+        if(resultFlag==0) {
+            if (!CalcApp.resultTextArea.getText().equals("0"))
+                CalcApp.resultTextArea.setText(CalcApp.resultTextArea.getText() + "9");
+            else CalcApp.resultTextArea.setText("9");
+        } else {
+            CalcApp.resultTextArea.setText("9");
+            clearVariables();
+        }
     }
 
     public void addButtonClicked(){
@@ -103,8 +142,13 @@ public class CalcController {
         operationFlag = 4;
     }
     public void resultButtonClicked(){
-        secondNumber = Double.parseDouble(CalcApp.resultTextArea.getText());
+        if(resultFlag==0)
+            secondNumber = Double.parseDouble(CalcApp.resultTextArea.getText());
+        resultFlag = 1;
         switch(operationFlag){
+            case 0:
+                firstNumber =  Double.parseDouble(CalcApp.resultTextArea.getText());
+                break;
             case 1:
                 firstNumber = firstNumber + secondNumber;
                 break;

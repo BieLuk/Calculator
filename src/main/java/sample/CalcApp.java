@@ -15,12 +15,12 @@ public class CalcApp extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("/calc.fxml"));
         resultTextArea = (TextArea) root.lookup("#resultTextArea");
         primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 600, 400));
+        primaryStage.setScene(new Scene(root));
         primaryStage.show();
-    }
+        }
 
 
-    public static void main(String[] args) {
+public static void main(String[] args) {
         launch(args);
-    }
-}
+        }
+        }
