@@ -125,21 +125,25 @@ public class CalcController {
         firstNumber = Double.parseDouble(CalcApp.resultTextArea.getText());
         CalcApp.resultTextArea.setText("0");
         operationFlag = 1;
+        resultFlag = 0;
     }
     public void subButtonClicked(){
         firstNumber = Double.parseDouble(CalcApp.resultTextArea.getText());
         CalcApp.resultTextArea.setText("0");
         operationFlag = 2;
+        resultFlag = 0;
     }
     public void mulButtonClicked(){
         firstNumber = Double.parseDouble(CalcApp.resultTextArea.getText());
         CalcApp.resultTextArea.setText("0");
         operationFlag = 3;
+        resultFlag = 0;
     }
     public void divButtonClicked(){
         firstNumber = Double.parseDouble(CalcApp.resultTextArea.getText());
         CalcApp.resultTextArea.setText("0");
         operationFlag = 4;
+        resultFlag = 0;
     }
 
     public void logButtonClicked(){
