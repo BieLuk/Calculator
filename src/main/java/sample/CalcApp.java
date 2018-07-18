@@ -13,11 +13,13 @@ public class CalcApp extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("/calc.fxml"));
+        Scene scene = new Scene(root);
         resultTextArea = (TextArea) root.lookup("#resultTextArea");
         primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root));
+        primaryStage.setScene(scene);
+        scene.getStylesheets().add("layout.css");
         primaryStage.show();
-        }
+    }
 
 
 public static void main(String[] args) {

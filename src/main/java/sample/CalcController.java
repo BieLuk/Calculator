@@ -141,6 +141,46 @@ public class CalcController {
         CalcApp.resultTextArea.setText("0");
         operationFlag = 4;
     }
+
+    public void logButtonClicked(){
+        firstNumber = Double.parseDouble(CalcApp.resultTextArea.getText());
+        CalcApp.resultTextArea.setText("" + Math.log10(firstNumber));
+    }
+    public void lnButtonClicked(){
+        firstNumber = Double.parseDouble(CalcApp.resultTextArea.getText());
+        CalcApp.resultTextArea.setText("" + Math.log(firstNumber));
+    }
+    public void cosButtonClicked(){
+        firstNumber = Double.parseDouble(CalcApp.resultTextArea.getText());
+        CalcApp.resultTextArea.setText("" + Math.cos(firstNumber));
+    }
+    public void sinButtonClicked(){
+        firstNumber = Double.parseDouble(CalcApp.resultTextArea.getText());
+        CalcApp.resultTextArea.setText("" + Math.sin(firstNumber));
+    }
+    public void tanButtonClicked(){
+        firstNumber = Double.parseDouble(CalcApp.resultTextArea.getText());
+        CalcApp.resultTextArea.setText("" + Math.tan(firstNumber));
+    }
+    public void ctanButtonClicked(){
+        firstNumber = Double.parseDouble(CalcApp.resultTextArea.getText());
+        CalcApp.resultTextArea.setText("" + 1/Math.tan(firstNumber));
+    }
+    public void modButtonClicked(){
+        firstNumber = Double.parseDouble(CalcApp.resultTextArea.getText());
+        CalcApp.resultTextArea.setText("0");
+        operationFlag = 5;
+    }
+    public void sqrtButtonClicked(){
+        firstNumber = Double.parseDouble(CalcApp.resultTextArea.getText());
+        CalcApp.resultTextArea.setText("" + Math.sqrt(firstNumber));
+    }
+    public void powButtonClicked(){
+        firstNumber = Double.parseDouble(CalcApp.resultTextArea.getText());
+        CalcApp.resultTextArea.setText("" + Math.pow(firstNumber,2));
+    }
+
+
     public void resultButtonClicked(){
         if(resultFlag==0)
             secondNumber = Double.parseDouble(CalcApp.resultTextArea.getText());
@@ -161,6 +201,8 @@ public class CalcController {
             case 4:
                 firstNumber = firstNumber / secondNumber;
                 break;
+            case 5:
+                firstNumber = firstNumber % secondNumber;
         }
         CalcApp.resultTextArea.setText(""+firstNumber);
     }
